@@ -2,7 +2,8 @@
     width: 320px;
     border: 1px solid white;
     // box-shadow: 30px 0 10px rgba(0,0,0,0.1);
-    grid-row: 1/7;
+    grid-row: 1/8;
+    position: fixed;
     display: none;
     background-color: white;
     z-index: 10;
@@ -10,6 +11,10 @@
 
 .active {
     display: block;
+}
+
+.shadow {
+    box-shadow: 30px 0 10px rgba(0,0,0,0.1);
 }
 
 .menu__header {

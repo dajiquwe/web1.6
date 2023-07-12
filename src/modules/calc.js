@@ -1,4 +1,4 @@
-import { document } from "postcss";
+
 
 export const mult = (a, b) => a * b;
 export const sum = async(a, b) => a + b;
@@ -147,11 +147,13 @@ function Menu() {
         document.querySelector('.costs').style.opacity ='0.1';
         document.querySelector('.description').style.opacity ='0.1';
         document.querySelector('.footer').style.opacity ='0.1';
+        sideMenu.classList.add('shadow');
     }
 }
 
 function closeMenu() {
     sideMenu.classList.remove('active');
+    sideMenu.classList.remove('shadow');
     close.style.display = 'none';
     document.querySelector('.header').style.opacity ='1';
     document.querySelector('.main').style.opacity ='1';
@@ -167,6 +169,55 @@ let feedback = document.querySelector('.feedback');
 feedb.addEventListener('click', openfeedb);
 
 function openfeedb() {
-    console.log('7');
-    feedback.classList.add('active');
+  console.log('7');
+  feedback.style.display = 'block';
+  document.querySelector('.header').style.opacity ='0.1';
+  document.querySelector('.main').style.opacity ='0.1';
+  document.querySelector('.companies').style.opacity ='0.1';
+  document.querySelector('.tech').style.opacity ='0.1';
+  document.querySelector('.costs').style.opacity ='0.1';
+  document.querySelector('.description').style.opacity ='0.1';
+  document.querySelector('.footer').style.opacity ='0.1';
+}
+
+let feedbclose = document.querySelector('.feedback__close');
+feedbclose.addEventListener('click', closefeedb);
+
+function closefeedb() {
+  feedback.style.display = 'none';
+  document.querySelector('.header').style.opacity ='1';
+  document.querySelector('.main').style.opacity ='1';
+  document.querySelector('.companies').style.opacity ='1';
+  document.querySelector('.tech').style.opacity ='1';
+  document.querySelector('.costs').style.opacity ='1';
+  document.querySelector('.description').style.opacity ='1';
+  document.querySelector('.footer').style.opacity ='1';
+}
+
+let call = document.getElementById('call');
+call.addEventListener('click', opencall);
+
+function opencall() {
+  document.querySelector('.call').style.display = 'block';
+  document.querySelector('.header').style.opacity ='0.1';
+  document.querySelector('.main').style.opacity ='0.1';
+  document.querySelector('.companies').style.opacity ='0.1';
+  document.querySelector('.tech').style.opacity ='0.1';
+  document.querySelector('.costs').style.opacity ='0.1';
+  document.querySelector('.description').style.opacity ='0.1';
+  document.querySelector('.footer').style.opacity ='0.1';
+}
+
+let callclose = document.querySelector('.call__close');
+callclose.addEventListener('click', closecall);
+
+function closecall() {
+  document.querySelector('.call').style.display = 'none';
+  document.querySelector('.header').style.opacity ='1';
+  document.querySelector('.main').style.opacity ='1';
+  document.querySelector('.companies').style.opacity ='1';
+  document.querySelector('.tech').style.opacity ='1';
+  document.querySelector('.costs').style.opacity ='1';
+  document.querySelector('.description').style.opacity ='1';
+  document.querySelector('.footer').style.opacity ='1';
 }
